@@ -230,10 +230,8 @@ with tab1:
             
             # Xử lý trường hợp key của model_map
             chosen_model_key = model_choice
-            if model_choice == "Logistic Regression(Không khuyến nghị)":
-                chosen_model_key = "Logistic Regression"
-            
-            pred, proba, feat_importance, top_risks = get_risk_factors(model_map[chosen_model_key], input_df, model_choice)
+
+            pred, proba, feat_importance, top_risks = get_risk_factors(model_map[model_choice], input_df, model_choice)
 
 
             # Result display
